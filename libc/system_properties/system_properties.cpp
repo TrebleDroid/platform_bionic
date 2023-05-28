@@ -121,6 +121,12 @@ static const char* redirectToProp(const char *name) {
     if(strcmp(name, "ro.build.version.security_patch") == 0) {
       return "ro.keymaster.xxx.security_patch";
     }
+    if(strcmp(name, "ro.boot.vbmeta.device_state") == 0) {
+      return "ro.keymaster.xxx.vbmeta_state";
+    }
+    if(strcmp(name, "ro.boot.verifiedbootstate") == 0) {
+      return "ro.keymaster.xxx.verifiedbootstate";
+    }
   }
   return name;
 }
